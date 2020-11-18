@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.conf import settings
 import random
 
 from unica_app.models import NumeroHistorico
@@ -27,7 +27,7 @@ def numero_al_azar_decimal(request):
 	# numeros_historicos = NumeroHistorico.objects.filter(request_information='python-requests/2.23.0')
 	context = {'numero_variable':nh, 
 	'lista_numeros_historicos':numeros_historicos}
-
+	context['db_config'] = settings.DATABASES
 
 	return render(request, 'numeros_lindos.html', context)
 
