@@ -1,0 +1,4 @@
+miweb/db.sqlite3
+miweb/miweb/__pycache__/*
+miweb/unica_app/__pycache__/*
+miweb/unica_app/migrations/__pycache__/*
